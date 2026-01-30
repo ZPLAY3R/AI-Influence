@@ -402,9 +402,10 @@
             <div class="badge">v3.3.7 • Updated: January 2026</div>
         </header>
         
-        <!-- WARNING BOX -->
+        <!-- WARNING BOX - PATAISYTA -->
         <div class="warning-box">
-            <strong>⚠️ IMPORTANT WARNING:</strong> AI Influence is designed to work with Vanilla Mount & Blade II: Bannerlord. If you experience crashes or issues, these are likely caused by compatibility problems with other mods. We do NOT provide support for mod compatibility issues - this is the user's responsibility.
+            <strong>⚠️ IMPORTANT WARNING:</strong> AI Influence is designed to work with Vanilla Mount & Blade II: Bannerlord.
+            If you experience crashes or issues, these are likely caused by compatibility problems with other mods. We do NOT provide support for mod compatibility issues - this is the user's responsibility.
         </div>
         
         <div class="section">
@@ -839,37 +840,6 @@
             </div>
         </div>
         
-        <!-- Version History -->
-        <div class="section page-break" id="version-history">
-            <h2 class="section-title"><span class="icon">📈</span> Evolution & Major Updates</h2>
-            <div class="version-timeline">
-                <div class="version-item">
-                    <div class="version-title">v2.x Series</div>
-                    <p><strong>Foundation:</strong> Basic AI dialogues, romance system, follow mechanics, initial diplomacy framework.</p>
-                </div>
-                
-                <div class="version-item">
-                    <div class="version-title">v3.0.0 (November 2025)</div>
-                    <p><strong>Major Expansion:</strong> Settlement combat system, economic effects, AI actions system, recruitment/vassalage mechanics.</p>
-                </div>
-                
-                <div class="version-item">
-                    <div class="version-title">v3.1.x (December 2025)</div>
-                    <p><strong>Enhanced Systems:</strong> Death history, improved diplomacy, relationship descriptions, weather integration.</p>
-                </div>
-                
-                <div class="version-item">
-                    <div class="version-title">v3.2.x (December 2025)</div>
-                    <p><strong>Interface & Polish:</strong> World Events GUI, performance optimizations, prisoner systems, bug fixes.</p>
-                </div>
-                
-                <div class="version-item">
-                    <div class="version-title">v3.3.x (January 2026)</div>
-                    <p><strong>Advanced Features:</strong> Major performance improvements, two-way messaging, roleplay items, kingdom transfers, optimization for 200+ NPCs.</p>
-                </div>
-            </div>
-        </div>
-        
         <!-- Technical Specifications -->
         <div class="section" id="tech-specs">
             <h2 class="section-title"><span class="icon">🔧</span> Technical Specifications</h2>
@@ -925,6 +895,37 @@
                         <strong>Advanced Crime & Justice:</strong> Law systems and trial mechanics
                     </li>
                 </ul>
+            </div>
+        </div>
+        
+        <!-- Version History - PERKELTA I APACIA -->
+        <div class="section page-break" id="version-history">
+            <h2 class="section-title"><span class="icon">📈</span> Evolution & Major Updates</h2>
+            <div class="version-timeline">
+                <div class="version-item">
+                    <div class="version-title">v2.x Series</div>
+                    <p><strong>Foundation:</strong> Basic AI dialogues, romance system, follow mechanics, initial diplomacy framework.</p>
+                </div>
+                
+                <div class="version-item">
+                    <div class="version-title">v3.0.0 (November 2025)</div>
+                    <p><strong>Major Expansion:</strong> Settlement combat system, economic effects, AI actions system, recruitment/vassalage mechanics.</p>
+                </div>
+                
+                <div class="version-item">
+                    <div class="version-title">v3.1.x (December 2025)</div>
+                    <p><strong>Enhanced Systems:</strong> Death history, improved diplomacy, relationship descriptions, weather integration.</p>
+                </div>
+                
+                <div class="version-item">
+                    <div class="version-title">v3.2.x (December 2025)</div>
+                    <p><strong>Interface & Polish:</strong> World Events GUI, performance optimizations, prisoner systems, bug fixes.</p>
+                </div>
+                
+                <div class="version-item">
+                    <div class="version-title">v3.3.x (January 2026)</div>
+                    <p><strong>Advanced Features:</strong> Major performance improvements, two-way messaging, roleplay items, kingdom transfers, optimization for 200+ NPCs.</p>
+                </div>
             </div>
         </div>
         
@@ -1810,75 +1811,4 @@
                     futureItems[2].innerHTML = `<span style="position: absolute; left: 0; top: 0; color: #8C5F2C; font-size: 1.2em;">▶</span><strong>${t.future3.split(':')[0]}:</strong> ${t.future3.split(':')[1]}`;
                 }
                 if (futureItems[3]) {
-                    futureItems[3].innerHTML = `<span style="position: absolute; left: 0; top: 0; color: #8C5F2C; font-size: 1.2em;">▶</span><strong>${t.future4.split(':')[0]}:</strong> ${t.future4.split(':')[1]}`;
-                }
-                if (futureItems[4]) {
-                    futureItems[4].innerHTML = `<span style="position: absolute; left: 0; top: 0; color: #8C5F2C; font-size: 1.2em;">▶</span><strong>${t.future5.split(':')[0]}:</strong> ${t.future5.split(':')[1]}`;
-                }
-            }
-            
-            // Footer
-            document.querySelector('footer h2').textContent = t.footerTitle;
-            document.querySelector('footer p').textContent = t.footerDesc;
-            const downloadBtns = document.querySelectorAll('.download-btn');
-            downloadBtns[0].textContent = t.steam;
-            downloadBtns[1].textContent = t.nexus;
-            downloadBtns[2].textContent = t.support;
-            
-            const footerInfo = document.querySelector('footer > div:last-child');
-            const footerParagraphs = footerInfo.querySelectorAll('p');
-            footerParagraphs[0].innerHTML = `<strong>${t.currentVersion}</strong> 3.3.7 • <strong>${t.lastUpdated}</strong> January 2026`;
-            footerParagraphs[1].innerHTML = `<strong>${t.compatibility}</strong> Mount & Blade II: Bannerlord v1.3.2+`;
-            footerParagraphs[2].textContent = t.footerNote;
-        }
-
-        // Sekcijų turinio atnaujinimo pagalbinė funkcija
-        function updateSectionContent(section, title, feature1, list1, feature2, list2) {
-            if (!section) return;
-            
-            // Atnaujiname pavadinimą
-            const icon = section.querySelector('.icon')?.textContent || '';
-            section.querySelector('.section-title').innerHTML = `<span class="icon">${icon}</span> ${title}`;
-            
-            // Atnaujiname korteles
-            const featureCards = section.querySelectorAll('.feature-card');
-            if (featureCards[0]) {
-                const icon1 = featureCards[0].querySelector('.icon')?.textContent || '';
-                featureCards[0].querySelector('h3').innerHTML = `<span class="icon">${icon1}</span> ${feature1}`;
-                updateList(featureCards[0].querySelector('ul'), list1);
-            }
-            if (featureCards[1]) {
-                const icon2 = featureCards[1].querySelector('.icon')?.textContent || '';
-                featureCards[1].querySelector('h3').innerHTML = `<span class="icon">${icon2}</span> ${feature2}`;
-                updateList(featureCards[1].querySelector('ul'), list2);
-            }
-        }
-
-        // Sąrašų atnaujinimo pagalbinė funkcija
-        function updateList(ulElement, items) {
-            if (!ulElement || !items) return;
-            ulElement.innerHTML = items.map(item => `<li>${item}</li>`).join('');
-        }
-
-        // Puslapio užkrovimo metu
-        document.addEventListener('DOMContentLoaded', function() {
-            // Nustatome pradinę kalbą
-            const savedLang = localStorage.getItem('preferredLanguage') || 'en';
-            changeLanguage(savedLang);
-            
-            // Pridedame datos informaciją
-            const date = new Date();
-            const options = { year: 'numeric', month: 'long', day: 'numeric' };
-            const currentDate = date.toLocaleDateString('en-US', options);
-            
-            const dateElement = document.createElement('p');
-            dateElement.style.marginTop = '10px';
-            dateElement.style.fontSize = '0.9em';
-            dateElement.style.opacity = '0.7';
-            dateElement.textContent = `Document generated: ${currentDate}`;
-            
-            document.querySelector('footer > div:last-child').appendChild(dateElement);
-        });
-    </script>
-</body>
-</html>
+                    futureItems[3].innerHTML
