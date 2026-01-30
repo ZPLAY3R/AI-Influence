@@ -16,64 +16,90 @@
         body {
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #E8D8B6;
+            background: linear-gradient(135deg, #231906 0%, #3E3018 100%);
             padding: 20px;
+            min-height: 100vh;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            background: white;
+            background: linear-gradient(to bottom, #3E3018, #5C4B28);
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             overflow: hidden;
-            border: 2px solid #8B4513;
+            border: 2px solid #8C5F2C;
         }
         
         header {
-            background: linear-gradient(135deg, #2c3e50 0%, #4a6491 100%);
-            color: white;
+            background: linear-gradient(135deg, #3F2506 0%, #5C4B28 100%);
+            color: #E8D8B6;
             padding: 40px;
             text-align: center;
             position: relative;
-            border-bottom: 8px solid #D4AF37;
+            border-bottom: 8px solid #8C5F2C;
         }
         
-        /* TAVO PAVEIKSLĖLIS VIRŠUJE */
+        /* ATNAUJINTA PAVEIKSLĖLIS */
         .header-image {
             width: 100%;
             max-width: 100%;
-            height: auto;
+            height: 500px;
+            object-fit: cover;
             display: block;
             margin-bottom: 20px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            border: 3px solid #8C5F2C;
         }
         
         .header-content h1 {
             font-family: 'MedievalSharp', cursive;
             font-size: 3.5em;
             margin-bottom: 10px;
-            text-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+            text-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+            color: #E8D8B6;
+            background: linear-gradient(to right, #8C5F2C, #E8D8B6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         
         .header-content .subtitle {
             font-size: 1.5em;
             opacity: 0.9;
             font-weight: 300;
+            color: #E8D8B6;
+        }
+        
+        .warning-box {
+            background: rgba(140, 44, 44, 0.7);
+            border: 3px solid #ff6b6b;
+            padding: 20px;
+            margin: 20px 40px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.1em;
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .warning-box strong {
+            color: #ffcccb;
+            font-size: 1.2em;
         }
         
         .badge {
             position: absolute;
             top: 20px;
             right: 20px;
-            background: #D4AF37;
-            color: #2c3e50;
+            background: #8C5F2C;
+            color: #231906;
             padding: 8px 15px;
             border-radius: 20px;
             font-weight: bold;
             font-size: 0.9em;
+            border: 2px solid #E8D8B6;
         }
         
         .language-switcher {
@@ -85,9 +111,9 @@
         }
         
         .lang-btn {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            background: rgba(140, 95, 44, 0.3);
+            color: #E8D8B6;
+            border: 2px solid #8C5F2C;
             padding: 5px 15px;
             border-radius: 20px;
             cursor: pointer;
@@ -96,33 +122,38 @@
         }
         
         .lang-btn:hover {
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(140, 95, 44, 0.5);
         }
         
         .lang-btn.active {
-            background: #D4AF37;
-            color: #2c3e50;
-            border-color: #D4AF37;
+            background: #8C5F2C;
+            color: #231906;
+            border-color: #E8D8B6;
         }
         
         .divider {
             height: 4px;
-            background: linear-gradient(90deg, #8B4513, #D4AF37, #8B4513);
+            background: linear-gradient(90deg, #3F2506, #8C5F2C, #3F2506);
             margin: 10px 0;
         }
         
         .section {
             padding: 30px 40px;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid rgba(140, 95, 44, 0.3);
+            background: rgba(62, 48, 24, 0.5);
+        }
+        
+        .section:nth-child(even) {
+            background: rgba(63, 37, 6, 0.3);
         }
         
         .section-title {
             font-family: 'MedievalSharp', cursive;
             font-size: 2.2em;
-            color: #2c3e50;
+            color: #E8D8B6;
             margin-bottom: 25px;
             padding-bottom: 10px;
-            border-bottom: 3px solid #D4AF37;
+            border-bottom: 3px solid #8C5F2C;
             display: flex;
             align-items: center;
             gap: 15px;
@@ -132,7 +163,7 @@
             content: '';
             width: 10px;
             height: 40px;
-            background: #8B4513;
+            background: #8C5F2C;
             border-radius: 2px;
         }
         
@@ -144,21 +175,23 @@
         }
         
         .feature-card {
-            background: #f8f9fa;
+            background: rgba(63, 37, 6, 0.5);
             border-radius: 10px;
             padding: 25px;
-            border-left: 5px solid #4a6491;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            border-left: 5px solid #8C5F2C;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
             transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(140, 95, 44, 0.3);
         }
         
         .feature-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+            background: rgba(63, 37, 6, 0.7);
         }
         
         .feature-card h3 {
-            color: #2c3e50;
+            color: #E8D8B6;
             margin-bottom: 15px;
             font-size: 1.4em;
             display: flex;
@@ -175,6 +208,7 @@
             margin-bottom: 12px;
             padding-left: 25px;
             position: relative;
+            color: #E8D8B6;
         }
         
         .feature-card li::before {
@@ -186,7 +220,7 @@
         
         .ru .feature-card li::before {
             content: '•';
-            color: #4a6491;
+            color: #8C5F2C;
             font-size: 1.5em;
         }
         
@@ -210,16 +244,17 @@
             top: 0;
             bottom: 0;
             width: 4px;
-            background: #4a6491;
+            background: #8C5F2C;
         }
         
         .version-item {
             position: relative;
             margin-bottom: 40px;
-            background: #f8f9fa;
+            background: rgba(63, 37, 6, 0.5);
             padding: 20px;
             border-radius: 10px;
-            border-left: 5px solid #D4AF37;
+            border-left: 5px solid #8C5F2C;
+            border: 1px solid rgba(140, 95, 44, 0.3);
         }
         
         .version-item::before {
@@ -230,14 +265,14 @@
             width: 20px;
             height: 20px;
             border-radius: 50%;
-            background: #D4AF37;
-            border: 4px solid #4a6491;
+            background: #8C5F2C;
+            border: 4px solid #3F2506;
         }
         
         .version-title {
             font-family: 'MedievalSharp', cursive;
             font-size: 1.8em;
-            color: #2c3e50;
+            color: #E8D8B6;
             margin-bottom: 10px;
         }
         
@@ -250,11 +285,11 @@
         }
         
         footer {
-            background: #2c3e50;
-            color: white;
+            background: linear-gradient(135deg, #3F2506 0%, #231906 100%);
+            color: #E8D8B6;
             padding: 30px;
             text-align: center;
-            border-top: 8px solid #D4AF37;
+            border-top: 8px solid #8C5F2C;
         }
         
         .download-links {
@@ -268,19 +303,19 @@
         .download-btn {
             display: inline-block;
             padding: 12px 25px;
-            background: #D4AF37;
-            color: #2c3e50;
+            background: #8C5F2C;
+            color: #231906;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
             transition: all 0.3s;
-            border: 2px solid transparent;
+            border: 2px solid #E8D8B6;
         }
         
         .download-btn:hover {
-            background: transparent;
-            color: #D4AF37;
-            border-color: #D4AF37;
+            background: #5C4B28;
+            color: #E8D8B6;
+            border-color: #8C5F2C;
         }
         
         @media print {
@@ -298,6 +333,9 @@
             .language-switcher {
                 display: none;
             }
+            .warning-box {
+                display: none;
+            }
         }
         
         .page-break {
@@ -311,10 +349,32 @@
             transform: translate(-50%, -50%) rotate(-45deg);
             font-size: 120px;
             opacity: 0.03;
-            color: #8B4513;
+            color: #8C5F2C;
             pointer-events: none;
             font-family: 'MedievalSharp', cursive;
             white-space: nowrap;
+            z-index: -1;
+        }
+        
+        p {
+            color: #E8D8B6;
+        }
+        
+        strong {
+            color: #E8D8B6;
+        }
+        
+        .section p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .section p:last-child {
+            background: rgba(63, 37, 6, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #8C5F2C;
         }
     </style>
 </head>
@@ -329,8 +389,8 @@
                 <button class="lang-btn" onclick="changeLanguage('ru')">RU</button>
             </div>
             
-            <!-- TAVO PAVEIKSLĖLIS VIRŠUJE -->
-            <img src="https://i.postimg.cc/nzKhLfZ8/Chat-GPT-Image-28-2025-13-03-01.png" 
+            <!-- ATNAUJINTA PAVEIKSLĖLIS -->
+            <img src="https://i.postimg.cc/vTsNJScj/Chat-GPT-Image-28-2025-13-03-01.png" 
                  alt="AI Influence Mod" 
                  class="header-image">
             
@@ -342,12 +402,17 @@
             <div class="badge">v3.3.7 • Updated: January 2026</div>
         </header>
         
+        <!-- WARNING BOX -->
+        <div class="warning-box">
+            <strong>⚠️ IMPORTANT WARNING:</strong> AI Influence is designed to work with Vanilla Mount & Blade II: Bannerlord. If you experience crashes or issues, these are likely caused by compatibility problems with other mods. We do NOT provide support for mod compatibility issues - this is the user's responsibility.
+        </div>
+        
         <div class="section">
             <h2 class="section-title">🎯 What This Mod Does</h2>
-            <p style="font-size: 1.2em; line-height: 1.8; margin-bottom: 20px;">
+            <p>
                 AI Influence is a revolutionary total conversion mod that fundamentally transforms <strong>Mount & Blade II: Bannerlord</strong> by adding sophisticated artificial intelligence systems to manage virtually every aspect of the game world. It turns static NPCs into living, breathing characters with memory, personality, and agency while introducing dynamic world events, intelligent diplomacy, and complex relationship systems.
             </p>
-            <p style="font-size: 1.2em; line-height: 1.8; background: #f8f9fa; padding: 20px; border-radius: 10px; border-left: 5px solid #4a6491;">
+            <p>
                 <strong>Core Concept:</strong> The mod replaces scripted interactions with <strong>real-time AI-generated content</strong>, making every playthrough unique and responsive to your actions. No two conversations, diplomatic events, or world developments are ever the same.
             </p>
         </div>
@@ -836,27 +901,27 @@
         <!-- Future Roadmap -->
         <div class="section" id="future-development">
             <h2 class="section-title"><span class="icon">🚀</span> Future Development</h2>
-            <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; border: 2px dashed #4a6491;">
-                <h3 style="color: #2c3e50; margin-bottom: 15px; font-size: 1.4em;">Planned Features</h3>
+            <div style="background: rgba(63, 37, 6, 0.7); padding: 25px; border-radius: 10px; border: 2px dashed #8C5F2C;">
+                <h3 style="color: #E8D8B6; margin-bottom: 15px; font-size: 1.4em;">Planned Features</h3>
                 <ul style="list-style: none; padding-left: 0;">
                     <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
-                        <span style="position: absolute; left: 0; top: 0; color: #D4AF37; font-size: 1.2em;">▶</span>
+                        <span style="position: absolute; left: 0; top: 0; color: #8C5F2C; font-size: 1.2em;">▶</span>
                         <strong>Disease System:</strong> Dynamic disease events affecting lords and populations
                     </li>
                     <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
-                        <span style="position: absolute; left: 0; top: 0; color: #D4AF37; font-size: 1.2em;">▶</span>
+                        <span style="position: absolute; left: 0; top: 0; color: #8C5F2C; font-size: 1.2em;">▶</span>
                         <strong>Enhanced Naval Systems:</strong> Expanded ship and sea voyage mechanics
                     </li>
                     <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
-                        <span style="position: absolute; left: 0; top: 0; color: #D4AF37; font-size: 1.2em;">▶</span>
+                        <span style="position: absolute; left: 0; top: 0; color: #8C5F2C; font-size: 1.2em;">▶</span>
                         <strong>Advanced Trade Networks:</strong> Complex economic simulation
                     </li>
                     <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
-                        <span style="position: absolute; left: 0; top: 0; color: #D4AF37; font-size: 1.2em;">▶</span>
+                        <span style="position: absolute; left: 0; top: 0; color: #8C5F2C; font-size: 1.2em;">▶</span>
                         <strong>Cultural Expansion:</strong> Deeper cultural differences and traditions
                     </li>
                     <li style="padding-left: 30px; position: relative;">
-                        <span style="position: absolute; left: 0; top: 0; color: #D4AF37; font-size: 1.2em;">▶</span>
+                        <span style="position: absolute; left: 0; top: 0; color: #8C5F2C; font-size: 1.2em;">▶</span>
                         <strong>Advanced Crime & Justice:</strong> Law systems and trial mechanics
                     </li>
                 </ul>
@@ -875,7 +940,7 @@
                 <a href="https://boosty.to/aiinfluence/donate" class="download-btn" target="_blank">Support Developer</a>
             </div>
             
-            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2);">
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(232, 216, 182, 0.2);">
                 <p><strong>Current Version:</strong> 3.3.7 • <strong>Last Updated:</strong> January 2026</p>
                 <p><strong>Compatibility:</strong> Mount & Blade II: Bannerlord v1.3.2+</p>
                 <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.8;">
@@ -895,14 +960,17 @@
                 'headerDesc': 'Revolutionary AI Integration Mod • Transforming Gaming Experience',
                 'badge': 'v3.3.7 • Updated: January 2026',
                 
+                // Warning
+                'warning': '⚠️ IMPORTANT WARNING: AI Influence is designed to work with Vanilla Mount & Blade II: Bannerlord. If you experience crashes or issues, these are likely caused by compatibility problems with other mods. We do NOT provide support for mod compatibility issues - this is the user\'s responsibility.',
+                
                 // What This Mod Does
-                'whatTitle': '🎯 What This Mod Does',
+                'whatTitle': 'What This Mod Does',
                 'whatText1': 'AI Influence is a revolutionary total conversion mod that fundamentally transforms <strong>Mount & Blade II: Bannerlord</strong> by adding sophisticated artificial intelligence systems to manage virtually every aspect of the game world. It turns static NPCs into living, breathing characters with memory, personality, and agency while introducing dynamic world events, intelligent diplomacy, and complex relationship systems.',
                 'whatText2': '<strong>Core Concept:</strong> The mod replaces scripted interactions with <strong>real-time AI-generated content</strong>, making every playthrough unique and responsive to your actions. No two conversations, diplomatic events, or world developments are ever the same.',
                 
                 // AI Dialog System
-                'aiDialogTitle': '🤖 AI-Powered Dialog System',
-                'dialogFeature1': '💬 Dynamic Conversations',
+                'aiDialogTitle': 'AI-Powered Dialog System',
+                'dialogFeature1': 'Dynamic Conversations',
                 'dialogList1': [
                     'Real-time generated dialogues — every conversation is unique',
                     'Context-aware responses based on world situation',
@@ -910,7 +978,7 @@
                     'Dynamic personalities created by AI for each NPC',
                     'Unique speech patterns, accents, and dialects'
                 ],
-                'dialogFeature2': '🎭 Advanced Interaction',
+                'dialogFeature2': 'Advanced Interaction',
                 'dialogList2': [
                     'Trust System — affects NPC openness and information sharing',
                     'Lie detection — NPCs can detect deception',
@@ -920,8 +988,8 @@
                 ],
                 
                 // World & Events
-                'worldTitle': '🌍 Dynamic World Events',
-                'worldFeature1': '⚡ Event Generation',
+                'worldTitle': 'Dynamic World Events',
+                'worldFeature1': 'Event Generation',
                 'worldList1': [
                     'AI-generated political, military, economic events',
                     'Social events, mysteries, and rumors',
@@ -929,7 +997,7 @@
                     'Events evolve and update over time',
                     'Personalized events for involved NPCs'
                 ],
-                'worldFeature2': '📊 Event Management',
+                'worldFeature2': 'Event Management',
                 'worldList2': [
                     'World Events GUI interface',
                     'Color-coded event categories',
@@ -939,8 +1007,8 @@
                 ],
                 
                 // Diplomacy
-                'diplomacyTitle': '⚔️ AI Diplomacy System',
-                'diplomacyFeature1': '👑 Kingdom Management',
+                'diplomacyTitle': 'AI Diplomacy System',
+                'diplomacyFeature1': 'Kingdom Management',
                 'diplomacyList1': [
                     'Fully automated AI diplomacy',
                     'AI-generated ruler statements',
@@ -948,7 +1016,7 @@
                     'Trade agreements & economic treaties',
                     'Territory transfers in peace negotiations'
                 ],
-                'diplomacyFeature2': '💰 Economic Diplomacy',
+                'diplomacyFeature2': 'Economic Diplomacy',
                 'diplomacyList2': [
                     'Tribute system — daily gold payments',
                     'Reparations system — one-time war payments',
@@ -958,8 +1026,8 @@
                 ],
                 
                 // Romance & Relationships
-                'romanceTitle': '💑 Romance & Relationship System',
-                'romanceFeature1': '❤️ Relationship Development',
+                'romanceTitle': 'Romance & Relationship System',
+                'romanceFeature1': 'Relationship Development',
                 'romanceList1': [
                     'Culturally-aware romance progression',
                     'NPC initiative — can initiate romantic interest',
@@ -967,7 +1035,7 @@
                     'AI-managed marriage proposals',
                     'Relationship decay without interaction'
                 ],
-                'romanceFeature2': '👨‍👩‍👧‍👦 Advanced Features',
+                'romanceFeature2': 'Advanced Features',
                 'romanceList2': [
                     'Intimate roleplay (romance level ≥40)',
                     'Pregnancy system with configurable probability',
@@ -977,8 +1045,8 @@
                 ],
                 
                 // Settlement Combat
-                'settlementTitle': '🏰 Settlement Combat System',
-                'settlementFeature1': '⚔️ Dynamic Battles',
+                'settlementTitle': 'Settlement Combat System',
+                'settlementFeature1': 'Dynamic Battles',
                 'settlementList1': [
                     'AI-managed settlement battles',
                     'Three combat triggers: dialogue, roleplay, attack',
@@ -986,7 +1054,7 @@
                     'Dynamic defender spawning',
                     'Civilian panic system'
                 ],
-                'settlementFeature2': '🛡️ Battle Systems',
+                'settlementFeature2': 'Battle Systems',
                 'settlementList2': [
                     'Companion decision making',
                     'Lord interventions with unique phrases',
@@ -996,8 +1064,8 @@
                 ],
                 
                 // AI Actions System
-                'actionsTitle': '⚙️ AI Actions & Task System',
-                'actionsFeature1': '🎮 Companion Commands',
+                'actionsTitle': 'AI Actions & Task System',
+                'actionsFeature1': 'Companion Commands',
                 'actionsList1': [
                     'Follow Player — automatic following',
                     'Go to Settlement — send to specific location',
@@ -1005,7 +1073,7 @@
                     'Siege Settlement — begin siege operations',
                     'Patrol Settlement — area patrol'
                 ],
-                'actionsFeature2': '🔄 Additional Actions',
+                'actionsFeature2': 'Additional Actions',
                 'actionsList2': [
                     'Wait Near Settlement — hold position',
                     'Raid Village — village attacks',
@@ -1015,8 +1083,8 @@
                 ],
                 
                 // Communication Systems
-                'communicationTitle': '📨 Communication Systems',
-                'communicationFeature1': '✉️ Messenger System',
+                'communicationTitle': 'Communication Systems',
+                'communicationFeature1': 'Messenger System',
                 'communicationList1': [
                     'Two-way correspondence with NPCs',
                     'NPCs can send letters to player',
@@ -1024,7 +1092,7 @@
                     'Tavern district messaging interface',
                     'Delivery costs based on distance'
                 ],
-                'communicationFeature2': '🔄 Correspondence Management',
+                'communicationFeature2': 'Correspondence Management',
                 'communicationList2': [
                     'NPCs decide on correspondence status',
                     'Configurable delivery times',
@@ -1034,8 +1102,8 @@
                 ],
                 
                 // Death History System
-                'deathTitle': '📜 Death History System',
-                'deathFeature1': '💀 Hero Death Tracking',
+                'deathTitle': 'Death History System',
+                'deathFeature1': 'Hero Death Tracking',
                 'deathList1': [
                     'Automatic death tracking for NPCs and player',
                     'AI-generated life stories for characters with 50+ interactions',
@@ -1043,7 +1111,7 @@
                     'Beautiful dialogue display showing full history',
                     'Optional feature — can decline history generation'
                 ],
-                'deathFeature2': '📖 Life Story Creation',
+                'deathFeature2': 'Life Story Creation',
                 'deathList2': [
                     'Dynamic biography generation upon death',
                     'Includes all major life events and achievements',
@@ -1053,8 +1121,8 @@
                 ],
                 
                 // Advanced NPC Systems
-                'npcTitle': '🧠 Advanced NPC Systems',
-                'npcFeature1': '🎭 NPC Initiative & Intelligence',
+                'npcTitle': 'Advanced NPC Systems',
+                'npcFeature1': 'NPC Initiative & Intelligence',
                 'npcList1': [
                     'NPCs can start conversations first in settlements',
                     'Global map encounters — enemies initiate dialogue instead of immediate combat',
@@ -1062,7 +1130,7 @@
                     'Personalized descriptions evolving through gameplay',
                     'Visit history tracking — NPCs remember settlements'
                 ],
-                'npcFeature2': '🗺️ Knowledge & Awareness',
+                'npcFeature2': 'Knowledge & Awareness',
                 'npcList2': [
                     'Knowledge system — NPCs know settlement status, world events',
                     'Friend location awareness — know where allies are',
@@ -1072,8 +1140,8 @@
                 ],
                 
                 // Economic Systems
-                'economyTitle': '💰 Economic Systems',
-                'economyFeature1': '📈 Dynamic Economy',
+                'economyTitle': 'Economic Systems',
+                'economyFeature1': 'Dynamic Economy',
                 'economyList1': [
                     'Economic effects from world events',
                     'Prosperity, food, security, and loyalty changes',
@@ -1081,7 +1149,7 @@
                     'Market price awareness — AI knows item values',
                     'Item trading — NPCs can sell workshops and items'
                 ],
-                'economyFeature2': '🏘️ Settlement Economics',
+                'economyFeature2': 'Settlement Economics',
                 'economyList2': [
                     'Village looting — significantly increased resources',
                     'Economic event propagation',
@@ -1091,8 +1159,8 @@
                 ],
                 
                 // Roleplay Item System
-                'itemTitle': '🎁 Roleplay Item System',
-                'itemFeature1': '📝 AI-Created Items',
+                'itemTitle': 'Roleplay Item System',
+                'itemFeature1': 'AI-Created Items',
                 'itemList1': [
                     'NPCs can give letters and documents',
                     'Unique item names and descriptions',
@@ -1100,7 +1168,7 @@
                     'Item mention parsing — AI recognizes specific items',
                     'Dynamic item creation based on context'
                 ],
-                'itemFeature2': '💼 Item Management',
+                'itemFeature2': 'Item Management',
                 'itemList2': [
                     'Personalized gifts from NPCs',
                     'Quest items with unique properties',
@@ -1110,8 +1178,8 @@
                 ],
                 
                 // Advanced Kingdom Management
-                'kingdomTitle': '👑 Advanced Kingdom Management',
-                'kingdomFeature1': '🔄 Power Dynamics',
+                'kingdomTitle': 'Advanced Kingdom Management',
+                'kingdomFeature1': 'Power Dynamics',
                 'kingdomList1': [
                     'Kingdom transfer — rulers can transfer power to vassals',
                     'Clan protection — player\'s clan can\'t be expelled if leader',
@@ -1119,7 +1187,7 @@
                     'Governor management — automatic removal when joining clan',
                     'Succession crisis events'
                 ],
-                'kingdomFeature2': '🏛️ Political Systems',
+                'kingdomFeature2': 'Political Systems',
                 'kingdomList2': [
                     'Court intrigue events',
                     'Faction power struggles',
@@ -1129,8 +1197,8 @@
                 ],
                 
                 // Advanced Combat Systems
-                'combatTitle': '🛡️ Advanced Combat Systems',
-                'combatFeature1': '⚔️ Battle Intelligence',
+                'combatTitle': 'Advanced Combat Systems',
+                'combatFeature1': 'Battle Intelligence',
                 'combatList1': [
                     'Battle information propagation to all lords',
                     'Siege handling — participants receive outcome info',
@@ -1138,7 +1206,7 @@
                     'Army join prevention — NPCs with tasks refuse armies',
                     'Tactical awareness based on terrain'
                 ],
-                'combatFeature2': '🎖️ Military Systems',
+                'combatFeature2': 'Military Systems',
                 'combatList2': [
                     'Strategic retreat decisions',
                     'Supply line awareness',
@@ -1148,8 +1216,8 @@
                 ],
                 
                 // Social Systems
-                'socialTitle': '📊 Social Systems',
-                'socialFeature1': '👥 Social Dynamics',
+                'socialTitle': 'Social Systems',
+                'socialFeature1': 'Social Dynamics',
                 'socialList1': [
                     'Text relationship descriptions — 15 gradations',
                     'Family connection awareness — extended relatives',
@@ -1157,7 +1225,7 @@
                     'Prisoner awareness — NPCs know about captives',
                     'Clan war knowledge — aware of kingdom conflicts'
                 ],
-                'socialFeature2': '🏘️ Community Systems',
+                'socialFeature2': 'Community Systems',
                 'socialList2': [
                     'Reputation system across factions',
                     'Gossip and rumor propagation',
@@ -1167,8 +1235,8 @@
                 ],
                 
                 // Game Systems Integration
-                'gameTitle': '🎮 Game Systems Integration',
-                'gameFeature1': '📚 Game Integration',
+                'gameTitle': 'Game Systems Integration',
+                'gameFeature1': 'Game Integration',
                 'gameList1': [
                     'Character encyclopedia updates with AI backstories',
                     'Accent/dialect implementation — phonetic spelling',
@@ -1176,7 +1244,7 @@
                     'Skill awareness — AI discusses own skills',
                     'Time context — accurate time, season, hour in prompts'
                 ],
-                'gameFeature2': '🔄 Compatibility Systems',
+                'gameFeature2': 'Compatibility Systems',
                 'gameList2': [
                     'Naval DLC support — ship and voyage information',
                     'Weather integration — considers conditions in decisions',
@@ -1186,7 +1254,7 @@
                 ],
                 
                 // Version History
-                'versionTitle': '📈 Evolution & Major Updates',
+                'versionTitle': 'Evolution & Major Updates',
                 'version1': 'v2.x Series',
                 'version1Desc': '<strong>Foundation:</strong> Basic AI dialogues, romance system, follow mechanics, initial diplomacy framework.',
                 'version2': 'v3.0.0 (November 2025)',
@@ -1199,8 +1267,8 @@
                 'version5Desc': '<strong>Advanced Features:</strong> Major performance improvements, two-way messaging, roleplay items, kingdom transfers, optimization for 200+ NPCs.',
                 
                 // Technical Specifications
-                'techTitle': '🔧 Technical Specifications',
-                'techFeature1': '⚡ Performance',
+                'techTitle': 'Technical Specifications',
+                'techFeature1': 'Performance',
                 'techList1': [
                     'Optimized for 200+ NPCs',
                     'Relationship caching system',
@@ -1208,7 +1276,7 @@
                     'War status caching (440x improvement)',
                     'Memory management settings'
                 ],
-                'techFeature2': '🛠️ Tools & Utilities',
+                'techFeature2': 'Tools & Utilities',
                 'techList2': [
                     'Force close dialog button',
                     'Open logs folder in MCM',
@@ -1218,7 +1286,7 @@
                 ],
                 
                 // Future Development
-                'futureTitle': '🚀 Future Development',
+                'futureTitle': 'Future Development',
                 'futureSubtitle': 'Planned Features',
                 'future1': 'Disease System: Dynamic disease events affecting lords and populations',
                 'future2': 'Enhanced Naval Systems: Expanded ship and sea voyage mechanics',
@@ -1244,14 +1312,17 @@
                 'headerDesc': 'Революционный мод интеграции ИИ • Преобразование игрового опыта',
                 'badge': 'v3.3.7 • Обновлено: Январь 2026',
                 
+                // Warning
+                'warning': '⚠️ ВАЖНОЕ ПРЕДУПРЕЖДЕНИЕ: AI Influence разработан для работы с Vanilla Mount & Blade II: Bannerlord. Если у вас возникают сбои или проблемы, они, скорее всего, вызваны проблемами совместимости с другими модами. Мы НЕ предоставляем поддержку по вопросам совместимости модов - это ответственность пользователя.',
+                
                 // What This Mod Does
-                'whatTitle': '🎯 Что делает этот мод',
+                'whatTitle': 'Что делает этот мод',
                 'whatText1': 'AI Influence — это революционный тотальный мод, который кардинально меняет <strong>Mount & Blade II: Bannerlord</strong>, добавляя сложные системы искусственного интеллекта для управления практически каждым аспектом игрового мира. Он превращает статичных NPC в живых персонажей с памятью, личностью и волей, а также вводит динамические мировые события, интеллектуальную дипломатию и сложные системы отношений.',
                 'whatText2': '<strong>Основная концепция:</strong> Мод заменяет скриптованные взаимодействия <strong>контентом, генерируемым ИИ в реальном времени</strong>, делая каждое прохождение уникальным и отзывчивым к вашим действиям. Ни один разговор, дипломатическое событие или развитие мира не повторяются.',
                 
                 // AI Dialog System
-                'aiDialogTitle': '🤖 Диалоговая система на основе ИИ',
-                'dialogFeature1': '💬 Динамические диалоги',
+                'aiDialogTitle': 'Диалоговая система на основе ИИ',
+                'dialogFeature1': 'Динамические диалоги',
                 'dialogList1': [
                     'Диалоги, генерируемые в реальном времени — каждый разговор уникален',
                     'Контекстно-зависимые ответы на основе ситуации в мире',
@@ -1259,7 +1330,7 @@
                     'Динамические личности, создаваемые ИИ для каждого NPC',
                     'Уникальные речевые паттерны, акценты и диалекты'
                 ],
-                'dialogFeature2': '🎭 Продвинутое взаимодействие',
+                'dialogFeature2': 'Продвинутое взаимодействие',
                 'dialogList2': [
                     'Система доверия — влияет на открытость NPC и обмен информацией',
                     'Детекция лжи — NPC могут обнаруживать обман',
@@ -1269,8 +1340,8 @@
                 ],
                 
                 // World & Events
-                'worldTitle': '🌍 Динамические мировые события',
-                'worldFeature1': '⚡ Генерация событий',
+                'worldTitle': 'Динамические мировые события',
+                'worldFeature1': 'Генерация событий',
                 'worldList1': [
                     'События, генерируемые ИИ: политические, военные, экономические',
                     'Социальные события, загадки и слухи',
@@ -1278,7 +1349,7 @@
                     'События развиваются и обновляются со временем',
                     'Персонализированные события для вовлеченных NPC'
                 ],
-                'worldFeature2': '📊 Управление событиями',
+                'worldFeature2': 'Управление событиями',
                 'worldList2': [
                     'Графический интерфейс мировых событий',
                     'Цветовое кодирование категорий событий',
@@ -1288,8 +1359,8 @@
                 ],
                 
                 // Diplomacy
-                'diplomacyTitle': '⚔️ Система дипломатии ИИ',
-                'diplomacyFeature1': '👑 Управление королевством',
+                'diplomacyTitle': 'Система дипломатии ИИ',
+                'diplomacyFeature1': 'Управление королевством',
                 'diplomacyList1': [
                     'Полностью автоматизированная дипломатия ИИ',
                     'Заявления правителей, сгенерированные ИИ',
@@ -1297,7 +1368,7 @@
                     'Торговые соглашения и экономические договоры',
                     'Передача территорий в мирных переговорах'
                 ],
-                'diplomacyFeature2': '💰 Экономическая дипломатия',
+                'diplomacyFeature2': 'Экономическая дипломатия',
                 'diplomacyList2': [
                     'Система дани — ежедневные золотые выплаты',
                     'Система репараций — единовременные военные выплаты',
@@ -1307,8 +1378,8 @@
                 ],
                 
                 // Romance & Relationships
-                'romanceTitle': '💑 Система романтики и отношений',
-                'romanceFeature1': '❤️ Развитие отношений',
+                'romanceTitle': 'Система романтики и отношений',
+                'romanceFeature1': 'Развитие отношений',
                 'romanceList1': [
                     'Культурно-ориентированное развитие романтики',
                     'Инициатива NPC — могут проявлять романтический интерес',
@@ -1316,7 +1387,7 @@
                     'Предложения о браке, управляемые ИИ',
                     'Ухудшение отношений без взаимодействия'
                 ],
-                'romanceFeature2': '👨‍👩‍👧‍👦 Продвинутые возможности',
+                'romanceFeature2': 'Продвинутые возможности',
                 'romanceList2': [
                     'Интимные ролевые игры (уровень романтики ≥40)',
                     'Система беременности с настраиваемой вероятностью',
@@ -1326,8 +1397,8 @@
                 ],
                 
                 // Settlement Combat
-                'settlementTitle': '🏰 Система боев в поселениях',
-                'settlementFeature1': '⚔️ Динамические битвы',
+                'settlementTitle': 'Система боев в поселениях',
+                'settlementFeature1': 'Динамические битвы',
                 'settlementList1': [
                     'Бои в поселениях, управляемые ИИ',
                     'Три триггера боя: диалог, ролевая игра, атака',
@@ -1335,7 +1406,7 @@
                     'Динамическое появление защитников',
                     'Система паники гражданских'
                 ],
-                'settlementFeature2': '🛡️ Боевые системы',
+                'settlementFeature2': 'Боевые системы',
                 'settlementList2': [
                     'Принятие решений спутниками',
                     'Вмешательство лордов с уникальными фразами',
@@ -1345,8 +1416,8 @@
                 ],
                 
                 // AI Actions System
-                'actionsTitle': '⚙️ Система действий и задач ИИ',
-                'actionsFeature1': '🎮 Команды спутникам',
+                'actionsTitle': 'Система действий и задач ИИ',
+                'actionsFeature1': 'Команды спутникам',
                 'actionsList1': [
                     'Следовать за игроком — автоматическое следование',
                     'Отправиться в поселение — отправка в конкретное место',
@@ -1354,7 +1425,7 @@
                     'Осадить поселение — начало осадных операций',
                     'Патрулировать поселение — патрулирование территории'
                 ],
-                'actionsFeature2': '🔄 Дополнительные действия',
+                'actionsFeature2': 'Дополнительные действия',
                 'actionsList2': [
                     'Ожидать возле поселения — удерживать позицию',
                     'Разграбить деревню — атаки на деревни',
@@ -1364,8 +1435,8 @@
                 ],
                 
                 // Communication Systems
-                'communicationTitle': '📨 Системы коммуникации',
-                'communicationFeature1': '✉️ Система посыльных',
+                'communicationTitle': 'Системы коммуникации',
+                'communicationFeature1': 'Система посыльных',
                 'communicationList1': [
                     'Двусторонняя переписка с NPC',
                     'NPC могут отправлять письма игроку',
@@ -1373,7 +1444,7 @@
                     'Интерфейс обмена сообщениями в таверне',
                     'Стоимость доставки в зависимости от расстояния'
                 ],
-                'communicationFeature2': '🔄 Управление перепиской',
+                'communicationFeature2': 'Управление перепиской',
                 'communicationList2': [
                     'NPC решают статус переписки',
                     'Настраиваемое время доставки',
@@ -1383,8 +1454,8 @@
                 ],
                 
                 // Death History System
-                'deathTitle': '📜 Система истории смерти',
-                'deathFeature1': '💀 Отслеживание смерти героев',
+                'deathTitle': 'Система истории смерти',
+                'deathFeature1': 'Отслеживание смерти героев',
                 'deathList1': [
                     'Автоматическое отслеживание смерти NPC и игрока',
                     'Истории жизни, сгенерированные ИИ для персонажей с 50+ взаимодействиями',
@@ -1392,7 +1463,7 @@
                     'Красивый диалог, показывающий полную историю',
                     'Опциональная функция — можно отказаться от генерации истории'
                 ],
-                'deathFeature2': '📖 Создание жизненных историй',
+                'deathFeature2': 'Создание жизненных историй',
                 'deathList2': [
                     'Динамическая генерация биографии после смерти',
                     'Включает все основные жизненные события и достижения',
@@ -1402,8 +1473,8 @@
                 ],
                 
                 // Advanced NPC Systems
-                'npcTitle': '🧠 Продвинутые системы NPC',
-                'npcFeature1': '🎭 Инициатива и интеллект NPC',
+                'npcTitle': 'Продвинутые системы NPC',
+                'npcFeature1': 'Инициатива и интеллект NPC',
                 'npcList1': [
                     'NPC могут начинать разговоры первыми в поселениях',
                     'Встречи на глобальной карте — враги инициируют диалог вместо немедленного боя',
@@ -1411,7 +1482,7 @@
                     'Персонализированные описания, развивающиеся в процессе игры',
                     'Отслеживание истории посещений — NPC помнят поселения'
                 ],
-                'npcFeature2': '🗺️ Знания и осведомленность',
+                'npcFeature2': 'Знания и осведомленность',
                 'npcList2': [
                     'Система знаний — NPC знают статус поселений, мировые события',
                     'Осведомленность о местонахождении друзей — знают, где находятся союзники',
@@ -1421,8 +1492,8 @@
                 ],
                 
                 // Economic Systems
-                'economyTitle': '💰 Экономические системы',
-                'economyFeature1': '📈 Динамическая экономика',
+                'economyTitle': 'Экономические системы',
+                'economyFeature1': 'Динамическая экономика',
                 'economyList1': [
                     'Экономические эффекты от мировых событий',
                     'Изменения процветания, еды, безопасности и лояльности',
@@ -1430,7 +1501,7 @@
                     'Осведомленность о рыночных ценах — ИИ знает стоимость предметов',
                     'Торговля предметами — NPC могут продавать мастерские и предметы'
                 ],
-                'economyFeature2': '🏘️ Экономика поселений',
+                'economyFeature2': 'Экономика поселений',
                 'economyList2': [
                     'Разграбление деревень — значительно увеличенные ресурсы',
                     'Распространение экономических событий',
@@ -1440,8 +1511,8 @@
                 ],
                 
                 // Roleplay Item System
-                'itemTitle': '🎁 Система ролевых предметов',
-                'itemFeature1': '📝 Предметы, созданные ИИ',
+                'itemTitle': 'Система ролевых предметов',
+                'itemFeature1': 'Предметы, созданные ИИ',
                 'itemList1': [
                     'NPC могут давать письма и документы',
                     'Уникальные названия и описания предметов',
@@ -1449,7 +1520,7 @@
                     'Парсинг упоминаний предметов — ИИ распознает конкретные предметы',
                     'Динамическое создание предметов на основе контекста'
                 ],
-                'itemFeature2': '💼 Управление предметами',
+                'itemFeature2': 'Управление предметами',
                 'itemList2': [
                     'Персонализированные подарки от NPC',
                     'Предметы заданий с уникальными свойствами',
@@ -1459,8 +1530,8 @@
                 ],
                 
                 // Advanced Kingdom Management
-                'kingdomTitle': '👑 Продвинутое управление королевством',
-                'kingdomFeature1': '🔄 Динамика власти',
+                'kingdomTitle': 'Продвинутое управление королевством',
+                'kingdomFeature1': 'Динамика власти',
                 'kingdomList1': [
                     'Передача королевства — правители могут передавать власть вассалам',
                     'Защита клана — клан игрока не может быть изгнан, если он лидер',
@@ -1468,7 +1539,7 @@
                     'Управление губернаторами — автоматическое удаление при присоединении к клану',
                     'События кризиса престолонаследия'
                 ],
-                'kingdomFeature2': '🏛️ Политические системы',
+                'kingdomFeature2': 'Политические системы',
                 'kingdomList2': [
                     'События придворных интриг',
                     'Борьба за власть между фракциями',
@@ -1478,8 +1549,8 @@
                 ],
                 
                 // Advanced Combat Systems
-                'combatTitle': '🛡️ Продвинутые боевые системы',
-                'combatFeature1': '⚔️ Боевой интеллект',
+                'combatTitle': 'Продвинутые боевые системы',
+                'combatFeature1': 'Боевой интеллект',
                 'combatList1': [
                     'Распространение боевой информации всем лордам',
                     'Обработка осад — участники получают информацию об исходе',
@@ -1487,7 +1558,7 @@
                     'Предотвращение присоединения к армии — NPC с задачами отказываются от армий',
                     'Тактическая осведомленность на основе местности'
                 ],
-                'combatFeature2': '🎖️ Военные системы',
+                'combatFeature2': 'Военные системы',
                 'combatList2': [
                     'Решения о стратегическом отступлении',
                     'Осведомленность о линиях снабжения',
@@ -1497,8 +1568,8 @@
                 ],
                 
                 // Social Systems
-                'socialTitle': '📊 Социальные системы',
-                'socialFeature1': '👥 Социальная динамика',
+                'socialTitle': 'Социальные системы',
+                'socialFeature1': 'Социальная динамика',
                 'socialList1': [
                     'Текстовые описания отношений — 15 градаций',
                     'Осведомленность о семейных связях — дальние родственники',
@@ -1506,7 +1577,7 @@
                     'Осведомленность о пленных — NPC знают о пленниках',
                     'Знание о войнах кланов — осведомлены о конфликтах королевств'
                 ],
-                'socialFeature2': '🏘️ Системы сообщества',
+                'socialFeature2': 'Системы сообщества',
                 'socialList2': [
                     'Система репутации между фракциями',
                     'Распространение сплетен и слухов',
@@ -1516,8 +1587,8 @@
                 ],
                 
                 // Game Systems Integration - SU PATAISYTA
-                'gameTitle': '🎮 Интеграция игровых систем',
-                'gameFeature1': '📚 Интеграция в игру',
+                'gameTitle': 'Интеграция игровых систем',
+                'gameFeature1': 'Интеграция в игру',
                 'gameList1': [
                     'Обновления энциклопедии персонажей с предысториями от ИИ',
                     'Реализация акцентов/диалектов — фонетическое написание',
@@ -1525,7 +1596,7 @@
                     'Осведомленность о навыках — ИИ обсуждает собственные навыки',
                     'Контекст времени — точное время, сезон, час в подсказках'
                 ],
-                'gameFeature2': '🔄 Системы совместимости',
+                'gameFeature2': 'Системы совместимости',
                 'gameList2': [
                     'Поддержка Naval DLC — информация о кораблях и путешествиях',
                     'Интеграция погоды — учитывает условия при принятии решений',
@@ -1535,7 +1606,7 @@
                 ],
                 
                 // Version History - SU PATAISYTA
-                'versionTitle': '📈 Эволюция и основные обновления',
+                'versionTitle': 'Эволюция и основные обновления',
                 'version1': 'Серия v2.x',
                 'version1Desc': '<strong>Основа:</strong> Базовые диалоги ИИ, система романтики, механика следования, начальная структура дипломатии.',
                 'version2': 'v3.0.0 (Ноябрь 2025)',
@@ -1548,8 +1619,8 @@
                 'version5Desc': '<strong>Продвинутые функции:</strong> Значительные улучшения производительности, двусторонняя переписка, ролевые предметы, передача королевств, оптимизация для 200+ NPC.',
                 
                 // Technical Specifications - SU PATAISYTA
-                'techTitle': '🔧 Технические характеристики',
-                'techFeature1': '⚡ Производительность',
+                'techTitle': 'Технические характеристики',
+                'techFeature1': 'Производительность',
                 'techList1': [
                     'Оптимизировано для 200+ NPC',
                     'Система кэширования отношений',
@@ -1557,7 +1628,7 @@
                     'Кэширование статуса войны (улучшение в 440 раз)',
                     'Настройки управления памятью'
                 ],
-                'techFeature2': '🛠️ Инструменты и утилиты',
+                'techFeature2': 'Инструменты и утилиты',
                 'techList2': [
                     'Кнопка принудительного закрытия диалога',
                     'Открытие папки логов в MCM',
@@ -1567,7 +1638,7 @@
                 ],
                 
                 // Future Development - SU PATAISYTA
-                'futureTitle': '🚀 Будущее развитие',
+                'futureTitle': 'Будущее развитие',
                 'futureSubtitle': 'Планируемые функции',
                 'future1': 'Система болезней: Динамические события болезней, затрагивающие лордов и население',
                 'future2': 'Улучшенные морские системы: Расширенные механики кораблей и морских путешествий',
@@ -1617,6 +1688,9 @@
             document.querySelector('.subtitle').textContent = t.subtitle;
             document.querySelector('.header-content p:nth-child(3)').textContent = t.headerDesc;
             document.querySelector('.badge').textContent = t.badge;
+            
+            // Warning
+            document.querySelector('.warning-box').innerHTML = `<strong>${t.warning.split(':')[0]}:</strong> ${t.warning.split(':')[1]}`;
             
             // What This Mod Does
             document.querySelectorAll('.section-title')[0].innerHTML = `<span class="icon">🎯</span> ${t.whatTitle}`;
@@ -1727,19 +1801,19 @@
                 // Pataisome visus punktus
                 const futureItems = futureBox.querySelectorAll('li');
                 if (futureItems[0]) {
-                    futureItems[0].innerHTML = `<span style="position: absolute; left: 0; top: 0; color: #D4AF37; font-size: 1.2em;">▶</span><strong>${t.future1.split(':')[0]}:</strong> ${t.future1.split(':')[1]}`;
+                    futureItems[0].innerHTML = `<span style="position: absolute; left: 0; top: 0; color: #8C5F2C; font-size: 1.2em;">▶</span><strong>${t.future1.split(':')[0]}:</strong> ${t.future1.split(':')[1]}`;
                 }
                 if (futureItems[1]) {
-                    futureItems[1].innerHTML = `<span style="position: absolute; left: 0; top: 0; color: #D4AF37; font-size: 1.2em;">▶</span><strong>${t.future2.split(':')[0]}:</strong> ${t.future2.split(':')[1]}`;
+                    futureItems[1].innerHTML = `<span style="position: absolute; left: 0; top: 0; color: #8C5F2C; font-size: 1.2em;">▶</span><strong>${t.future2.split(':')[0]}:</strong> ${t.future2.split(':')[1]}`;
                 }
                 if (futureItems[2]) {
-                    futureItems[2].innerHTML = `<span style="position: absolute; left: 0; top: 0; color: #D4AF37; font-size: 1.2em;">▶</span><strong>${t.future3.split(':')[0]}:</strong> ${t.future3.split(':')[1]}`;
+                    futureItems[2].innerHTML = `<span style="position: absolute; left: 0; top: 0; color: #8C5F2C; font-size: 1.2em;">▶</span><strong>${t.future3.split(':')[0]}:</strong> ${t.future3.split(':')[1]}`;
                 }
                 if (futureItems[3]) {
-                    futureItems[3].innerHTML = `<span style="position: absolute; left: 0; top: 0; color: #D4AF37; font-size: 1.2em;">▶</span><strong>${t.future4.split(':')[0]}:</strong> ${t.future4.split(':')[1]}`;
+                    futureItems[3].innerHTML = `<span style="position: absolute; left: 0; top: 0; color: #8C5F2C; font-size: 1.2em;">▶</span><strong>${t.future4.split(':')[0]}:</strong> ${t.future4.split(':')[1]}`;
                 }
                 if (futureItems[4]) {
-                    futureItems[4].innerHTML = `<span style="position: absolute; left: 0; top: 0; color: #D4AF37; font-size: 1.2em;">▶</span><strong>${t.future5.split(':')[0]}:</strong> ${t.future5.split(':')[1]}`;
+                    futureItems[4].innerHTML = `<span style="position: absolute; left: 0; top: 0; color: #8C5F2C; font-size: 1.2em;">▶</span><strong>${t.future5.split(':')[0]}:</strong> ${t.future5.split(':')[1]}`;
                 }
             }
             
@@ -1753,7 +1827,7 @@
             
             const footerInfo = document.querySelector('footer > div:last-child');
             const footerParagraphs = footerInfo.querySelectorAll('p');
-            footerParagraphs[0].innerHTML = `<strong>${t.currentVersion}</strong> 3.3.7 • <strong>${t.lastUpdated}</strong> Январь 2026`;
+            footerParagraphs[0].innerHTML = `<strong>${t.currentVersion}</strong> 3.3.7 • <strong>${t.lastUpdated}</strong> January 2026`;
             footerParagraphs[1].innerHTML = `<strong>${t.compatibility}</strong> Mount & Blade II: Bannerlord v1.3.2+`;
             footerParagraphs[2].textContent = t.footerNote;
         }
