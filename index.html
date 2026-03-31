@@ -349,7 +349,7 @@
                 <p class="subtitle">Mount & Blade II: Bannerlord — Complete Feature Compendium</p>
                 <p>Revolutionary AI Integration Mod • Transforming Gaming Experience</p>
             </div>
-            <div class="badge">v4.0.2 • Updated: March 2026</div>
+            <div class="badge">v4.1.0 • Updated: March 2026</div>
         </header>
         
         <!-- WARNING BOX - PATAISYTA -->
@@ -818,7 +818,7 @@
             </div>
         </div>
         
-        <!-- Version History - PERKELTA I APACIA (now with v4.0 updates) -->
+        <!-- Version History - PERKELTA I APACIA (now with v4.1.0) -->
         <div class="section page-break" id="version-history">
             <h2 class="section-title"><span class="icon">📈</span> Evolution & Major Updates</h2>
             <div class="version-timeline">
@@ -847,7 +847,7 @@
                     <p><strong>Advanced Features:</strong> Major performance improvements, two-way messaging, roleplay items, kingdom transfers, optimization for 200+ NPCs.</p>
                 </div>
 
-                <!-- New v4.0.0 entry -->
+                <!-- v4.0.0 entry -->
                 <div class="version-item">
                     <div class="version-title">v4.0.0 (March 2026)</div>
                     <p><strong>New Features:</strong> Disease System (first version) — diseases spread between settlements, affect populations; AI Quests — NPCs create dynamic quests based on events; Lip Sync for TTS (requires rhubarb.exe); Fief Transfers in Dialogue — grant fiefs directly; Kingdom Capitals — each kingdom has a proper capital; NPC Economic Awareness; Army Reinforcement Awareness.<br>
@@ -869,6 +869,16 @@
                     <p><strong>New:</strong> Arena Training — train troops at town arenas (XP gain, cost, cooldown, toggle in MCM).<br>
                     <strong>Fixes:</strong> Medicine XP on hero recovery corrected; Lords now receive medicine XP on personal recovery; Diplomacy — trade agreement pending response bug fixed; Territory transfer with multiple settlements fixed; Quarantine settlement action fixed; NPC Initiative — relation changes, TTS await, hostile initiative notifications fixed; Quests — events reach target NPCs, crash on dead quest giver fixed; Messengers — dialog description shows latest message; Diseases — troop immunity strengthened.</p>
                 </div>
+
+                <!-- NEW: v4.1.0 entry (added update) -->
+                <div class="version-item">
+                    <div class="version-title">v4.1.0 (March 2026)</div>
+                    <p><strong>New:</strong> Group conversation — talk to several NPCs at once during missions (towns, keeps, lord halls, etc.). Press Alt+T near lords, clan companions, wanderers, or notables within ~5 m: your line is broadcast to everyone in range, and each hears the others’ replies in the same round (shared group history in their AI context). Participants update as people move: new arrivals can join, those who walk away are paused until they return within a larger grace radius — you end the talk when you leave, not automatically. With TTS on, responses are prepared in a pipeline (next NPC while the current line plays). If nearby NPCs were in a private scripted exchange, your message can interrupt and pull them into the group. Requires the main mod toggle; works like the rest of AI dialog (API, prompts, technical actions where applicable).<br>
+                    Battle Tactics AI — LLM-driven orders in field battles (not sieges). The battle leader on each side (player faction general, or an AI lord if you are not the general) periodically gets a tactical snapshot of formations, casualties, and combat status, then issues real in-game orders via the native order system. Optional: Alt+B natural-language commands for your side (interpreted by AI and converted to orders). Optional formation captains (companions or enemy heroes) command only their formation. If your commander falls, the next best tactician on the team takes over. Commander shouts and troop barks can show as on-screen phrases and in the log; battle chatter can optionally be written into lords’ histories for Dynamic Events. All options live under MCM «Battle Tactics AI» (master switch, interval, player text commands, ally/enemy captain AI, log/display, dynamic events logging).<br>
+                    <strong>Fixed:</strong> Diplomacy: fixed diplomatic / world events vanishing from the interface when they should stay visible (statements and event entries no longer disappear incorrectly).<br>
+                    Settlement transfer in dialogue: fixed handing over or receiving fiefs through NPC conversation — transfers that should execute after agreement in chat now resolve correctly instead of failing silently or losing the settlement.<br>
+                    <strong>Bug fixes and improvements.</strong></p>
+                </div>
             </div>
         </div>
         
@@ -885,7 +895,7 @@
             </div>
             
             <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(232, 216, 182, 0.2);">
-                <p><strong>Current Version:</strong> 4.0.2 • <strong>Last Updated:</strong> March 2026</p>
+                <p><strong>Current Version:</strong> 4.1.0 • <strong>Last Updated:</strong> March 2026</p>
                 <p><strong>Compatibility:</strong> Mount & Blade II: Bannerlord v1.3.2+</p>
                 <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.8;">
                     This document is community-generated based on official changelogs. Always check official sources for latest information.
